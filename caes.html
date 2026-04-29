@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PetExpress | Rações para Cachorros</title>
+  <link rel="stylesheet" href="style-caes.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="home-button" title="Voltar para a Home">
+        <i class="fas fa-home"></i>
+      </a>
+      <h1>Rações para Cachorros</h1>
+    </div>
+  </header>
+
+  <main class="product-grid">
+    <div class="product-card">
+      <img src="img/1.jpg" alt="Premier Pet Formula Adultos Porte Grande">
+      <h2>Premier Pet Formula Adultos Porte Grande</h2>
+      <p class="brand">Marca: Premier</p>
+      <p class="age">Idade: Adulto</p>
+      <p class="price">R$ 179,90</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/2.jpg" alt="Golden Mega Adultos Raças Grandes">
+      <h2>Golden Mega Adultos Raças Grandes</h2>
+      <p class="brand">Marca: Golden</p>
+      <p class="age">Idade: Adulto</p>
+      <p class="price">R$ 161,99</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/3.jpg" alt="Golden Mega Filhotes Porte Grande">
+      <h2>Golden Mega Filhotes Porte Grande</h2>
+      <p class="brand">Marca: Golden</p>
+      <p class="age">Idade: Filhote</p>
+      <p class="price">R$ 161,91</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/4.png" alt="Premier Pet Formula Adultos Porte Pequeno">
+      <h2>Premier Pet Formula Adultos Porte Pequeno</h2>
+      <p class="brand">Marca: Premier</p>
+      <p class="age">Idade: Adulto</p>
+      <p class="price">R$ 67,90</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/5.jpg" alt="Golden Mini Bits Adultos Pequeno Porte">
+      <h2>Golden Mini Bits Adultos Pequeno Porte</h2>
+      <p class="brand">Marca: Golden</p>
+      <p class="age">Idade: Adulto</p>
+      <p class="price">R$ 65,99</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/6.jpg" alt="Golden Filhotes Pequeno Porte">
+      <h2>Golden Filhotes Pequeno Porte</h2>
+      <p class="brand">Marca: Golden</p>
+      <p class="age">Idade: Adulto</p>
+      <p class="price">R$ 72,90</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+  </main>
+
+  <div id="alert" class="hidden">Produto adicionado ao carrinho</div>
+
+<script src="caes-js.js"></script>
+
+</body>
+</html>

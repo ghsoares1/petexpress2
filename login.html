@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - PetExpress</title>
+    <link rel="stylesheet" href="style-login.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="auth-card">
+            <div class="brand-block">
+                <a href="index.html" class="logo-link">
+                    <img src="img/lg.png" alt="PetExpress" class="logo-img">
+                </a>
+                <div class="brand-copy">
+                    <span class="eyebrow">PetExpress</span>
+                    <h1>Bem-vindo de volta!</h1>
+                    <p>Entre na sua conta para continuar suas compras e acompanhar seus pedidos.</p>
+                </div>
+            </div>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <button type="submit" class="btn-submit">Entrar</button>
+            </form>
+            <p class="switch-form">Ainda não tem conta? <a href="cadastro.html">Criar cadastro</a></p>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="loginSuccessModal">
+        <div class="modal-card">
+            <h3 id="welcomeTitle">Bem-vindo!</h3>
+            <p id="welcomeMessage">Login realizado com sucesso. Redirecionando...</p>
+        </div>
+    </div>
+    <script src="login-js.js"></script>
+</body>
+</html>

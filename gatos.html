@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PetExpress | Rações para Gatos</title>
+  <link rel="stylesheet" href="style-gatos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="home-button" title="Voltar para a Home">
+        <i class="fas fa-home"></i>
+      </a>
+      <h1>Rações para Gatos</h1>
+    </div>
+  </header>
+
+  <main class="product-grid">
+    <div class="product-card">
+      <img src="img/c1.png" alt="Whiskas Adulto Carne">
+      <h2>Whiskas Adulto Carne</h2>
+      <p class="brand">Marca: Whiskas</p>
+      <p class="age">Idade: Adulto</p>
+      <p class="price">R$ 29,90</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/c2.jpg" alt="Golden Gatos Castrados">
+      <h2>Golden Gatos Castrados</h2>
+      <p class="brand">Marca: Royal Canin</p>
+      <p class="age">Idade: Adulto</p>
+      <p class="price">R$ 64,90</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/c3.png" alt="Premier Gatos Filhotes Frango">
+      <h2>Premier Gatos Filhotes Frango</h2>
+      <p class="brand">Marca: Whiskas</p>
+      <p class="age">Idade: Filhote</p>
+      <p class="price">R$ 89,90</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/c4.jpg" alt="GranPlus Gatos Adultos Carne & Arroz">
+      <h2>GranPlus Gatos Adultos Carne & Arroz</h2>
+      <p class="brand">Marca: Royal Canin</p>
+      <p class="age">Idade: Adulto</p>
+      <p class="price">R$ 72,50</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/c5.jpg" alt="Cat Chow Naturalis Frango">
+      <h2>Cat Chow Naturalis Frango</h2>
+      <p class="brand">Marca: Whiskas</p>
+      <p class="age">Idade: Adulto</p>
+      <p class="price">R$ 55,90</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+
+    <div class="product-card">
+      <img src="img/c6.jpg" alt="Special Cat Prime Salmão">
+      <h2>Special Cat Prime Salmão</h2>
+      <p class="brand">Marca: Baw Waw</p>
+      <p class="age">Idade: Adulto</p>
+      <p class="price">R$ 59,90</p>
+      <button onclick="addToCart(this)">Comprar</button>
+    </div>
+  </main>
+
+  <div id="alert" class="hidden">Produto adicionado ao carrinho</div>
+
+ <script src="gatos-js.js"></script>
+
+</body>
+</html>

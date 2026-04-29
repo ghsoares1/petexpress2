@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetExpress | Checkout</title>
+    <link rel="stylesheet" href="style-checkout.css" />
+</head>
+<body>
+    <header>
+        <a href="index.html" class="brand-link">
+            <img src="img/lg.png" alt="Logo PetExpress" class="logo" />
+        </a>
+    </header>
+
+    <main class="checkout-page">
+        <section class="checkout-card">
+            <div class="checkout-header">
+                <div>
+                    <h1>Finalizar Pedido</h1>
+                    <p>Revise seu pedido e informe os dados para entrega.</p>
+                </div>
+                <span class="order-badge">Checkout</span>
+            </div>
+
+            <div class="checkout-grid">
+                <div class="order-summary">
+                    <h2>Resumo do pedido</h2>
+                    <div class="order-list"></div>
+                    <div class="summary-total">
+                        <span>Total do pedido</span>
+                        <strong class="summary-value">R$ 0,00</strong>
+                    </div>
+                </div>
+
+                <form class="checkout-form" id="checkoutForm">
+                    <div class="section-header">
+                        <h2>Endereço de entrega</h2>
+                        <span class="section-note" id="accountNotice">Você precisa ter conta para concluir.</span>
+                    </div>
+
+                    <div class="form-block address-choice-block">
+                        <label class="radio-option compact">
+                            <input type="radio" name="addressChoice" id="addressExisting" value="existing" />
+                            <span>Usar endereço cadastrado</span>
+                        </label>
+                        <label class="radio-option compact">
+                            <input type="radio" name="addressChoice" id="addressNew" value="new" checked />
+                            <span>Informar novo endereço</span>
+                        </label>
+                    </div>
+
+                    <div class="saved-address hidden" id="savedAddressBlock"></div>
+
+                    <div class="manual-address" id="manualAddressFields">
+                        <div class="form-group">
+                            <label for="fullName">Nome completo</label>
+                            <input id="fullName" name="fullName" type="text" required />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input id="phone" name="phone" type="tel" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="cep">CEP</label>
+                                <input id="cep" name="cep" type="text" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Endereço</label>
+                            <input id="address" name="address" type="text" required />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="number">Número</label>
+                                <input id="number" name="number" type="text" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="complement">Complemento</label>
+                                <input id="complement" name="complement" type="text" placeholder="Opcional" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="neighborhood">Bairro</label>
+                            <input id="neighborhood" name="neighborhood" type="text" required />
+                        </div>
+                    </div>
+
+                    <div class="form-block compact">
+                        <h2>Forma de entrega</h2>
+                        <label class="radio-option compact">
+                            <input type="radio" name="delivery" value="Entrega pela loja" required />
+                            <span>Entrega pela loja</span>
+                        </label>
+                        <label class="radio-option compact">
+                            <input type="radio" name="delivery" value="Retirada no local" />
+                            <span>Retirada no local</span>
+                        </label>
+                    </div>
+
+                    <div class="form-block compact">
+                        <h2>Forma de entrega</h2>
+                        <label class="radio-option compact">
+                            <input type="radio" name="delivery" value="Receber em casa" required />
+                            <span>Receber em casa</span>
+                        </label>
+                        <label class="radio-option compact">
+                            <input type="radio" name="delivery" value="Retirar na loja" />
+                            <span>Retirar na loja</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" id="btn-finalizar" class="confirm-btn">Finalizar compra</button>
+                        <p class="helper-text">Após confirmar, você será redirecionado ao Mercado Pago para concluir o pagamento.</p>
+                    </div>
+
+                    <div class="message-box" id="messageBox"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay hidden" id="authModal">
+        <div class="modal-card">
+            <h3>Você precisa estar cadastrado para finalizar a compra.</h3>
+            <div class="modal-actions">
+                <a class="modal-button primary" href="login.html?redirect=checkout">Entrar</a>
+                <a class="modal-button secondary" href="cadastro.html">Criar conta</a>
+                <button class="modal-button cancel" id="closeModalBtn" type="button">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="checkout-js.js"></script>
+</body>
+</html>

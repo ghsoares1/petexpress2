@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Produto - PetShop</title>
+  <link rel="stylesheet" href="style-produto.css" />
+</head>
+<body>
+  <main class="container-cadastro">
+    <h1>Cadastro de Produto</h1>
+    <form id="form-cadastro" novalidate>
+      <div class="campo">
+        <label for="nome">Nome do Produto <span class="obrigatorio">*</span></label>
+        <input type="text" id="nome" name="nome" placeholder="Ex: Ração Golden Adulto" required />
+      </div>
+
+      <div class="campo">
+        <label for="tipo-produto">Tipo do Produto <span class="obrigatorio">*</span></label>
+        <select id="tipo-produto" name="tipo-produto" required>
+          <option value="" disabled selected>Selecione o tipo</option>
+          <option value="racao">Ração</option>
+          <option value="brinquedo">Brinquedo</option>
+          <option value="petisco">Petisco</option>
+          <option value="acessorio">Acessório</option>
+          <option value="higiene">Higiene</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="tipo-animal">Tipo do Animal <span class="obrigatorio">*</span></label>
+        <select id="tipo-animal" name="tipo-animal" required>
+          <option value="" disabled selected>Selecione o tipo</option>
+          <option value="cachorro">Cachorro</option>
+          <option value="gato">Gato</option>
+          <option value="ambos">Ambos</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="preco">Valor do Produto (R$) <span class="obrigatorio">*</span></label>
+        <input type="number" id="preco" name="preco" placeholder="Ex: 89.90" min="0" step="0.01" required />
+      </div>
+
+        <div class="campo">
+        <label for="codigo-barras">Código de Barras <span class="obrigatorio">*</span></label>
+        <input type="text" id="codigo-barras" name="codigo-barras" placeholder="Ex: 7891234567890" required />
+        </div>
+
+      <div class="campo">
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" name="descricao" rows="4" placeholder="Descrição breve do produto"></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="imagem">URL da Imagem</label>
+        <input type="url" id="imagem" name="imagem" placeholder="Ex: https://exemplo.com/imagem.jpg" />
+      </div>
+
+<button type="submit" class="btn-enviar">Cadastrar Produto</button>
+</form>
+
+<div id="mensagem-aviso" class="mensagem-aviso">
+  Seu produto foi enviado para Análise, obrigado por fazer parte da PetExpress!
+</div>
+
+  </main>
+
+  <script src="produto-js.js"></script>
+</body>
+</html>

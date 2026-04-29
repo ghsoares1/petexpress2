@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff8f0;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+.container-cadastro {
+  max-width: 480px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 24px;
+  box-shadow: 0 12px 28px rgba(255, 123, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  color: #ff7b00;
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+.campo {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.obrigatorio {
+  color: #e63946;
+  margin-left: 4px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"],
+select,
+textarea {
+  padding: 10px 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #ff7b00;
+  outline: none;
+  background-color: #fff;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+.btn-enviar {
+  background-color: #ff7b00;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.btn-enviar:hover {
+  background-color: #e68a00;
+}
+
+.mensagem-sucesso {
+  margin-top: 20px;
+  padding: 14px;
+  background-color: #d4edda;
+  border: 1.5px solid #c3e6cb;
+  border-radius: 8px;
+  color: #155724;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.mensagem-aviso {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fffae6;
+  border-left: 6px solid #ff7b00;
+  color: #663c00;
+  padding: 16px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(255, 123, 0, 0.3);
+  z-index: 9999;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  max-width: 320px;
+}
+
+.mensagem-aviso.show {
+  opacity: 1;
+  transform: translateX(0);
+}

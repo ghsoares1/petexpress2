@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Carrinho de Compras - Petshop</title>
+    <link rel="stylesheet" href="style-carrinho.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/lg.png" alt="Logo Petshop" class="logo">
+        </a>
+    </header>
+    
+    <main>
+        <section class="cart">
+            <h2>Seu Carrinho</h2>
+            <p class="cart-description">Veja os itens escolhidos e gerencie quantidades direto no seu carrinho.</p>
+            <div class="cart-items"></div>
+            <div class="empty-cart hidden">Seu carrinho está vazio. Adicione produtos para continuar.</div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-value">R$ 0,00</span>
+                </div>
+                <button class="checkout-btn" type="button">Finalizar Compra</button>
+            </div>
+        </section>
+
+        <section class="recommendations-section hidden">
+            <h3>Você também pode gostar de:</h3>
+            <div class="recommendations"></div>
+        </section>
+    </main>
+
+    <script src="carrinho-js.js"></script>
+</body>
+</html>

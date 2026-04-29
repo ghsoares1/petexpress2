@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - PetExpress</title>
+    <link rel="stylesheet" href="style-cadastro.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="auth-card signup-card">
+            <div class="brand-block">
+                <a href="index.html" class="logo-link">
+                    <img src="img/lg.png" alt="PetExpress" class="logo-img">
+                </a>
+                <div class="brand-copy">
+                    <span class="eyebrow">PetExpress</span>
+                    <h1>Crie sua conta</h1>
+                    <p>Complete seus dados pessoais e de endereço para aproveitar nossos benefícios.</p>
+                </div>
+            </div>
+            <form id="form-cadastro">
+                <div class="form-grid">
+                    <fieldset class="form-section">
+                        <legend>Dados Pessoais</legend>
+                        <div class="input-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" id="sobrenome" name="sobrenome" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="senha">Senha</label>
+                            <input type="password" id="senha" name="senha" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="confirmar">Confirmar senha</label>
+                            <input type="password" id="confirmar" name="confirmar" required>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form-section">
+                        <legend>Endereço</legend>
+                        <div class="input-group">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" id="complemento" name="complemento">
+                        </div>
+                        <div class="input-group">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" id="bairro" name="bairro" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep" required>
+                        </div>
+                    </fieldset>
+                </div>
+                <button type="submit" class="btn-submit">Cadastrar</button>
+                <p class="switch-form">Já tem uma conta? <a href="login.html">Fazer login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="signupSuccessModal">
+        <div class="modal-card">
+            <h3>Cadastro realizado com sucesso!</h3>
+            <p>Agora faça login para continuar.</p>
+            <div class="modal-actions">
+                <button class="modal-button primary" id="goToLoginBtn" type="button">Ir para login</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="cadastro-js.js"></script>
+</body>
+</html>
